@@ -1,9 +1,9 @@
-import { foo as file$foo, Base as file$Base } from './file.mjs'
-class Derived extends file$Base {
-  [file$foo]() {
-    super[file$foo]();
+import { foo, Base } from './file.mjs'
+class Derived extends Base {
+  [foo]() {
+    super[foo]();
     console.log('Hello from Derived!');
   }
 }
 const instance = new Derived();
-instance[file$foo]();
+instance[foo]();
